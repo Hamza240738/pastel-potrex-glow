@@ -1,15 +1,9 @@
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import DemoSection from "@/components/DemoSection";
+import { HeroSectionAnimated } from "@/components/HeroSectionAnimated";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-pastel">
-      <Navigation />
-      <main>
-        <HeroSection />
-        <DemoSection />
-      </main>
+    <div className="min-h-screen">
+      <HeroSectionAnimated />
     </div>
   );
 };
