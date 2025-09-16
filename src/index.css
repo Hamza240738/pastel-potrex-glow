@@ -1,88 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Potrex Design System - Soft Pastels & Elegant Typography */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Pastel Background Gradients */
+    --background: 340 30% 95%;
+    --foreground: 220 20% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Soft Pastel Colors */
+    --pastel-pink: 340 60% 92%;
+    --pastel-purple: 280 40% 90%;
+    --pastel-blue: 220 50% 88%;
+    
+    /* Brand Colors */
+    --brand-blue: 220 75% 65%;
+    --brand-purple: 250 60% 70%;
+    
+    /* Card & Surface Colors */
+    --card: 0 0% 98%;
+    --card-foreground: 220 20% 25%;
+    --glass: 0 0% 100%;
+    --glass-foreground: 220 20% 30%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Functional Colors */
+    --primary: 220 75% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 20% 93%;
+    --secondary-foreground: 220 20% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --muted: 220 15% 85%;
+    --muted-foreground: 220 15% 50%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 40% 90%;
+    --accent-foreground: 220 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --border: 220 30% 88%;
+    --input: 220 30% 88%;
+    --ring: 220 75% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --radius: 1rem;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Gradients */
+    --gradient-pastel: linear-gradient(135deg, hsl(var(--pastel-pink)), hsl(var(--pastel-purple)), hsl(var(--pastel-blue)));
+    --gradient-brand: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-purple)));
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Shadows */
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.15);
 
-    --radius: 0.5rem;
+    /* Typography */
+    --font-serif: 'Fraunces', serif;
+    --font-sans: 'Inter', sans-serif;
 
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar Variables */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 20% 8%;
+    --foreground: 340 30% 95%;
+    
+    --pastel-pink: 340 40% 15%;
+    --pastel-purple: 280 30% 12%;
+    --pastel-blue: 220 40% 15%;
+    
+    --brand-blue: 220 75% 70%;
+    --brand-purple: 250 60% 75%;
+    
+    --card: 240 20% 10%;
+    --card-foreground: 340 30% 90%;
+    --glass: 240 20% 12%;
+    --glass-foreground: 340 30% 85%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --primary: 220 75% 70%;
+    --primary-foreground: 240 20% 8%;
+    
+    --secondary: 240 20% 15%;
+    --secondary-foreground: 340 30% 85%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --muted: 240 15% 20%;
+    --muted-foreground: 240 15% 60%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 30% 18%;
+    --accent-foreground: 340 30% 85%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --border: 240 20% 18%;
+    --input: 240 20% 18%;
+    --ring: 220 75% 70%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +123,19 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
   }
 }
