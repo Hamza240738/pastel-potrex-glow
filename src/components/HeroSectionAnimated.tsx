@@ -3,7 +3,7 @@ import { ArrowRight, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
-import dashboardImage from "@/assets/potrex-dashboard.png"
+import dashboardImage from "@/assets/potrex-dashboard-hd.png"
 
 const transitionVariants = {
     item: {
